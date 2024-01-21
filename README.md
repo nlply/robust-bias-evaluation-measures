@@ -26,7 +26,7 @@ wget -O data/ss.json https://raw.githubusercontent.com/moinnadeem/StereoSet/mast
 
 The original data is already in the `data` folder, if not, please download it in [CrowS-Pairs (CP)](https://github.com/nyu-mll/crows-pairs) and [StereoSet (SS)](https://github.com/moinnadeem/StereoSet)
 
-Then, preprocess the data with the following script
+Then, preprocess the data with the following script:
 ```
 cd code/
 python preprocessing.py --input stereoset --output ../data/paralled_ss.json
@@ -35,15 +35,15 @@ python preprocessing.py --input crows_pairs --output ../data/paralled_cp.json
 > We refer to the method of [Kaneko et al.](https://github.com/kanekomasahiro/evaluate_bias_in_mlm) to preprocess the data
 
 ## 💇‍♂️Data Sampling
-Use the following script to sample the data, the sampling ratio is 30%, 40%, 50%, 60%, 70% and 80%
+Use the following script to sample the data, the sampling ratio is 30%, 40%, 50%, 60%, 70% and 80%:
 ```
 cd code/
 python sampling.py --sample_rate [sample_rate]
 ```
-You can set `[sample_rate]` to 0.8 for 80% sampling
+You can set `[sample_rate]` to 0.8 for 80% sampling.
 
 ## 🎯Evaluation
-Use the following script to get the PLL score of MLMs
+Use the following script to get the PLL score of MLMs:
 ```
 cd code/
 python evaluation.py --data [ss, cp] --output ../result/output/ --model [bert-base-cased, roberta-large, albert-large-v2] --sample_rate [sample_rate] --method [aul, cps, sss, gms]
@@ -56,7 +56,7 @@ python evaluation.py --data ss --output ../result/output/ --model bert-base-case
 If you set `[sample_rate]` to 0.8, the file name will be `result/output/0.8_ss_gms_bert-base-cased.json`
 
 ## 📄Scoring
-Use the following script to score the MLM with the PLL score
+Use the following script to score the MLM with the PLL score:
 ```
 cd code/
 python scoring.py --data [ss, cp] --output ../result/output/ --model [bert-base-cased, roberta-large, albert-large-v2] --sample_rate [sample_rate] --method [aul, sss, cps, kls, jss]
