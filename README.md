@@ -70,5 +70,11 @@ Similarly, if you set `[sample_rate]` to 0.8, the file name will be `result/scor
 
 If this work has helped you in any way, please cite it by the following:
 ```
-to be appeare
+@article{liu2024robust,
+    title = {Robust Evaluation Measures for Evaluating Social Biases in Masked Language Models},
+    author = {Yang Liu},
+    journal = {arXiv preprint arXiv:2401.11601},
+    year = {2024},
+    doi = {10.48550/arXiv.2401.11601}
+}
 ```
