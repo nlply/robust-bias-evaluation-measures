@@ -69,7 +69,7 @@ python scoring.py --data ss --output ../result/output/ --model bert-base-cased -
 Similarly, if you set `[sample_rate]` to 0.8, the file name will be `result/scoring/0.8_ss_kls_bert-base-cased.json`
 
 If this work has helped you in any way, please cite it by the following:
-```
+```bibtex
 @article{liu2024robust,
     title = {Robust Evaluation Measures for Evaluating Social Biases in Masked Language Models},
     author = {Yang Liu},
